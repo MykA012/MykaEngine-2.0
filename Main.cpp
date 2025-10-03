@@ -107,6 +107,7 @@ int main()
 	Shader shader(fs::current_path().string() + "/floorVert.glsl", fs::current_path().string() + "/floorFrag.glsl");
 
 	Object obj(vertices, brick);
+	obj.SetVelocity(glm::vec3(2.0f, 0.0f, 0.0f));
 
 	// Camera
 	Camera camera(width, height, glm::vec3(0.0f, 2.0f, 5.0f));

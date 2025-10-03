@@ -1,9 +1,9 @@
 #include "PhysicalObject.h"
 #include <iostream>
-//const glm::vec3 GRAVITY = glm::vec3(0.0f, -9.81f, 0.0f);
+//const glm::vec3 GRAVITY = glm::vec3(0.0f, -9.81f * 0.1f, 0.0f);
 const glm::vec3 GRAVITY = glm::vec3(0.0f, 0.0f, 0.0f);
 
-PhysicalObject::PhysicalObject() : position(glm::vec3(0.0f)), velocity(glm::vec3(0.0f)), acceleration(glm::vec3(0.0f)), mass(0.0f), transformMatrix(glm::mat4(1.0f)) {}
+PhysicalObject::PhysicalObject() : position(glm::vec3(0.0f)), velocity(glm::vec3(0.0f)), acceleration(glm::vec3(0.0f)), mass(1.0f), transformMatrix(glm::mat4(1.0f)) {}
 
 void PhysicalObject::ApplyForce(const glm::vec3& force)
 {
