@@ -1,5 +1,6 @@
 #include "PhysicalObject.h"
 #include <iostream>
+#include "GameObject.h"
 //const glm::vec3 GRAVITY = glm::vec3(0.0f, -9.81f * 0.1f, 0.0f);
 const glm::vec3 GRAVITY = glm::vec3(0.0f, 0.0f, 0.0f);
 
@@ -11,7 +12,7 @@ void PhysicalObject::ApplyForce(const glm::vec3& force)
 	acceleration += force / mass;
 }
 
-void PhysicalObject::OnUpdate(float deltaTime)
+void PhysicalObject::Update(float deltaTime)
 {
 	// v = v0 + at	=>	v += at
 	velocity += (acceleration + GRAVITY) * deltaTime;

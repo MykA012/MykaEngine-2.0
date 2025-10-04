@@ -25,6 +25,9 @@
     <Filter Include="Файлы ресурсов\Shaders">
       <UniqueIdentifier>{a0306d23-0f28-405c-b276-cc5164ffeb6c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\libs sources">
+      <UniqueIdentifier>{62e4110a-6230-4d79-8f09-7224e64d5b3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="grass_block.png">
@@ -35,13 +38,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stb.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="glad.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
@@ -68,7 +65,16 @@
     <ClCompile Include="PhysicalObject.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Object.cpp">
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Исходные файлы\libs sources</Filter>
+    </ClCompile>
+    <ClCompile Include="stb.cpp">
+      <Filter>Исходные файлы\libs sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -105,8 +111,14 @@
     <ClInclude Include="PhysicalObject.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Object.h">
+    <ClInclude Include="GameObject.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Defaults.h">
+      <Filter>Файлы ресурсов</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

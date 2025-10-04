@@ -2,7 +2,7 @@
 
 namespace fs = std::filesystem;
 
-#include "Object.h"
+#include "GameObject.h"
 
 int width = 800;
 int height = 600;
@@ -106,7 +106,7 @@ int main()
 	Texture grass_block((fs::current_path().string() + "/grass_block.png").c_str(), GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	Shader shader(fs::current_path().string() + "/floorVert.glsl", fs::current_path().string() + "/floorFrag.glsl");
 
-	Object obj(vertices, brick);
+	GameObject obj(vertices, brick);
 	obj.SetVelocity(glm::vec3(2.0f, 0.0f, 0.0f));
 
 	// Camera
@@ -140,7 +140,8 @@ int main()
 		camera.Inputs(window, deltaTime);
 		camera.UpdateMatrices(45.0f, 0.1f, 100.0f);
 
-		obj.Update(shader, camera, deltaTime);
+		obj.Update(deltaTime);
+		obj.Render(shader, camera);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

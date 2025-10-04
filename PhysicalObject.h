@@ -10,7 +10,7 @@ public:
 
 	void ApplyForce(const glm::vec3& force);
 
-	void OnUpdate(float deltaTime);
+	void Update(float deltaTime);
 
 public:
 	// Set

@@ -1,0 +1,4 @@
+#pragma once
+
+#define DEFAULT_WINDOW_WIDTH 800
+#define DEFAULT_WINDOW_HEIGHT 600
